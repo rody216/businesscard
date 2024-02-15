@@ -60,24 +60,30 @@ body {
     padding-bottom: 6px;
     color: #0093AF;    
 }
+h5 {
+    margin-top: -40px; /* Ajusta el margen superior según sea necesario */
+    font-size: 14px;
+    /* Otros estilos para h5 */
+}
 
 h3 {
-    font-size: 20px;
-    margin-top: -40px;
-    margin-bottom: 3px;
+    font-size: 24px;
+    /* Otros estilos para h3 */
 }
 
 h4 {
-    
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    /* Otros estilos para h4 */
 }
+
 
 p {
     padding-left: 30px;
     padding-right: 30px;
     line-height: 1.5;
     color: rgb(105, 100, 109);
-    font-size: 14px;    
+    font-size: 18px;    
 }
 
 p a {
