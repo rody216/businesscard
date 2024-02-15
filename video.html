@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Crculo de Suboficiales</title>        
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/carrusel.css"> 
+    
+    <script>
+    
+        function redirectToIndex(event) {
+            if (event.target.classList.contains('image')) {
+                window.location.href = "index.html";
+            }
+        }
+       
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('.container');
+            container.addEventListener('click', redirectToIndex);            
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="shape">
+            <div class="image"></div>
+        </div>        
+        
+        <h2>Video Institucional</h2>
+        
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/LNcRwbPg5II?si=dheEaqM2HKAKF0AT?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+            
+    </div>
+
+   
+    
+</body>
+</html>
