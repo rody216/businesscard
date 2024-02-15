@@ -11,22 +11,24 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/all.css">
     <script>
-        // Función para redireccionar a about.html cuando se hace clic en la imagen
+        
+
         function redirectToAbout(event) {
             if (event.target.classList.contains('image')) {
                 window.location.href = "about.html";
             }
         }
 
-        // Función para redireccionar a las redes sociales correspondientes cuando se hace clic en ellas
+       
         function redirectToSocial(event) {
             const clickedIcon = event.target;
 
             if (clickedIcon.tagName === 'I') {
-                const socialMedia = clickedIcon.classList[1]; // Obtenemos la clase que contiene el nombre de la red social
+                const socialMedia = clickedIcon.classList[1]; 
                 console.log('Icono clickeado:', clickedIcon);
                 console.log('Clase del icono:', socialMedia);
-                // Definimos los enlaces correspondientes para cada red social
+                
+
                 const socialMediaLinks = {
                     'fa-facebook-f': 'https://www.facebook.com/circulosuboficialesffmm',
                     'fa-twitter': 'https://twitter.com/CSFFMM',
@@ -35,14 +37,14 @@
                     'fa-youtube': 'https://www.youtube.com/@SoporteWebCSFFMM/'
                 };
 
-                // Redireccionamos a la página correspondiente si existe un enlace para la red social clickeada
+                
                 if (socialMediaLinks.hasOwnProperty(socialMedia)) {
                     window.location.href = socialMediaLinks[socialMedia];
                 }
             }
         }
 
-        // Agregamos eventos de escucha a los elementos al cargar el DOM
+        
         document.addEventListener('DOMContentLoaded', function() {
             var container = document.querySelector('.container');
             container.addEventListener('click', redirectToAbout);
@@ -58,14 +60,13 @@
 
     <div class="container">
         <div class="shape">
-            <!-- Añade un identificador único al elemento image -->
             <div class="image"></div>
         </div>
         
-        <h3>John Padilla</h3>
+        <h3>John Fredy Padilla</h3>
         <h4>Director Circulo de Suboficiales</h4>
         
-        <p><a href="about.html">Sobre el Director</a></p> <!-- Hipervínculo -->
+        <p><a href="about.html">Sobre el Director</a></p> 
         <p>Galería</p>
         <p>Videos</p>
         <p>Web Site</p>
