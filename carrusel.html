@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Crculo de Suboficiales</title>        
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/carrusel.css"> 
+    
+    <script>
+    
+        function redirectToIndex(event) {
+            if (event.target.classList.contains('image')) {
+                window.location.href = "index.html";
+            }
+        }
+       
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('.container');
+            container.addEventListener('click', redirectToIndex);            
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="shape">
+            <div class="image"></div>
+        </div>        
+        
+        <h2>Carrousel Fotográfico</h2>
+        <div class="content-all">
+        <div class="content-carrousel">
+            <figure><img src="media/img1.jpg"></figure>
+            <figure><img src="media/img2.jpg"></figure>
+            <figure><img src="media/img3.jpg"></figure>
+            <figure><img src="media/img4.jpg"></figure>
+            
+        </div>
+    </div>
+    </div>
+
+   
+    
+</body>
+</html>
