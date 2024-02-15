@@ -1,24 +1,31 @@
 
-  ul{
-    display: flex;
-    justify-content: center;
-  }
+ul{
+  display: flex;
+  justify-content: center;
+}
 
-  ul li{
-    position: relative;
-    display: block;
-    color: #666;
-    font-size: 20px;
-    height: 30px;
-    width: 30px;
-    background: #151617;
-    line-height: 35px;
-    border-radius: 50%;
-    margin-left: 8px;
-    margin-top: -50px;
-    cursor: pointer;
-    transition: .5s;
-  }
+ul li{
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: #666;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  background: #151617;
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-top: -50px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+ul li:hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
   ul li:before{
     position: absolute;
     content: '';

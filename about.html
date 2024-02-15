@@ -8,6 +8,20 @@
     <script src="https://kit.fontawesome.com/7033b9db97.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>    
     <link rel="stylesheet" href="css/about.css">
+
+    <script>
+        function redirectToIndex(event) {
+            if (event.target.classList.contains('image')) {
+                window.location.href = "index.html";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('.container');
+            container.addEventListener('click', redirectToIndex);            
+        });
+
+    </script>
    
     
 </head>
@@ -19,7 +33,7 @@
         </div>
         <h3>PERFIL DIRECTOR GENERAL</h3>
         <h5>Sargento Mayor de Comando de Infantería de Marina John Fredy Padilla Casanova</h4>
-        
+        <br>
         <p class="justificado">
             El SMCIM John Fredy Padilla Casanova, es profesional en Administración de Empresas, cuenta con un diplomado en Seguridad y Defensa, Dirección y Administración de Empresas, y Especialista en Seguridad de instalaciones Físicas.
         </p>
