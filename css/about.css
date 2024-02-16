@@ -99,3 +99,19 @@ ul {
     height: 100px; 
     z-index: 3; 
 }
+
+.back {
+    position: fixed;
+    width: 16px;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 25px;
+       
+    color: bisque;
+}
+
+.back:hover {
+    cursor: pointer;
+    color: #0093AF;
+    transition: 0.5s;
+}
