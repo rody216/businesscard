@@ -6,22 +6,6 @@
     <title>Director Crculo de Suboficiales</title>        
     <link rel="stylesheet" href="css/estilos.css">
  
-    
-    <script>
-    
-        function redirectToIndex(event) {
-            if (event.target.classList.contains('image')) {
-                window.location.href = "index.html";
-            }
-        }
-       
-       
-        document.addEventListener('DOMContentLoaded', function() {
-            var container = document.querySelector('.container');
-            container.addEventListener('click', redirectToIndex);            
-        });
-
-    </script>
 </head>
 <body>
 
@@ -32,57 +16,51 @@
         </div>
 
         <!-- Aquí colocas tu código QR -->
-    <img src="media/qr.svg" alt="Código QR" id="qr-code">
+        <img src="media/qrico.png" alt="Código QR" id="qr-code">
 
-    <!-- Botones para compartir y agregar contacto -->
-    <button onclick="shareQR()">Compartir QR</button>
-    <button onclick="addContact()">Agregar a Contactos</button>
+        <!-- Botones para compartir y agregar contacto -->
+        <button onclick="shareQR()">Compartir QR</button>
+        <button onclick="downloadVCard()">Agregar a Contactos</button>
 
-    <script>
-        function shareQR() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Compartir Código QR',
-                    text: 'Aquí tienes mi código QR',
-                    url: 'https://rody216.github.io/businesscard/media/qr-code.svg'
-                }).then(() => {
-                    console.log('Código QR compartido exitosamente');
-                }).catch((error) => {
-                    console.error('Error al compartir código QR:', error);
-                });
-            } else {
-                console.error('La API Web Share no está soportada en este navegador');
+        <script>
+            function shareQR() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Compartir Código QR',
+                        text: 'Aquí tienes mi código QR',
+                        url: 'https://rody216.github.io/businesscard/media/qr-code.svg'
+                    }).then(() => {
+                        console.log('Código QR compartido exitosamente');
+                    }).catch((error) => {
+                        console.error('Error al compartir código QR:', error);
+                    });
+                } else {
+                    console.error('La API Web Share no está soportada en este navegador');
+                }
             }
-        }
 
-        function addContact() {
-            const contact = {
-                name: 'John Fredy Padilla Casanova',
-                email: ['dirección@circulo.mil.co'],
-                phone: ['+576015939900'],
-                celular: ['+573160104932'],
-                address: 'Calle 138 No. 55 - 38 Bogotá D.C. - Colombia',
-                note: 'Director Crculo de Suboficiales'
-                
-            };
+            function downloadVCard() {
+                const contactInfo = `BEGIN:VCARD
+                VERSION:3.0
+                FN:John Fredy Padilla Casanova
+                EMAIL:dirección@circulo.mil.co
+                TEL;TYPE=HOME,VOICE:+576015939900
+                TEL;TYPE=CELL,VOICE:+573160104932
+                ADR;TYPE=WORK,PREF:;;Calle 138 No. 55 - 38 Bogotá D.C. - Colombia
+                NOTE:Director Crculo de Suboficiales
+                END:VCARD`;
 
-            const contactProperties = navigator.contacts.create(contact);
-
-            contactProperties.save().then(() => {
-                console.log('Contacto agregado exitosamente');
-            }).catch((error) => {
-                console.error('Error al agregar contacto:', error);
-            });
-        }
-    </script>
-        
-      
-        
-      
-            
-    </div>
-
-   
+                const blob = new Blob([contactInfo], { type: 'text/vcard' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'contacto.vcf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }
+        </script>
+    </div>   
     
 </body>
 </html>
