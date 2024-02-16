@@ -1,0 +1,22 @@
+h3 {
+    text-align: center;
+    margin-top: -55px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+h4 {
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: -20px;
+    font-size: 18px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
