@@ -1,0 +1,9 @@
+BEGIN:VCARD
+                VERSION:3.0
+                FN:John Fredy Padilla Casanova
+                EMAIL:dirección@circulo.mil.co
+                TEL;TYPE=HOME,VOICE:+576015939900
+                TEL;TYPE=CELL,VOICE:+573160104932
+                ADR;TYPE=WORK,PREF:;;Calle 138 No. 55 - 38 Bogotá D.C. - Colombia
+                NOTE:Director Crculo de Suboficiales
+                END:VCARD
