@@ -2,14 +2,15 @@
     display: flex;
     justify-content: center;
     align-items:flex-start;
-    height: 100%; /* Ajusta la altura según sea necesario */
+    height: 100%; 
     margin-top: -55px;
 }
 
 .qr-container img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 90%;   
    
-    /* Otros estilos según sea necesario */
 }
+
+
 
